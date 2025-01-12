@@ -20,6 +20,13 @@ from sklearn.linear_model import LinearRegression
 regressor = LinearRegression()
 regressor.fit(X_train, y_train)
 
+intercept = regressor.intercept_
+print(f"Intercept (b0): {intercept}")
+
+coefficients = regressor.coef_
+print(f"Coefficients (b1, b2, ...): {coefficients}")
+
+
 print('\nStep 5 - Predicting the Test set results')
 # Use the trained model to predict salaries for the test set (X_test)
 y_predict = regressor.predict(X_test)
